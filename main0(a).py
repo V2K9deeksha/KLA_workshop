@@ -44,3 +44,10 @@ tsp_solution = nx.approximation.traveling_salesman_problem(G)
 # Display the optimized delivery route
 print("Optimized delivery route:")
 print(tsp_solution)
+
+
+output = {"v0": {'path':tsp_solution}}
+
+with open("level0_output.json", "w") as outfile:
+    json.dump(output, outfile)
+     
